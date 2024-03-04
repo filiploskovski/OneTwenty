@@ -1,0 +1,6 @@
+@OneTwenty.WebApiMock_HostAddress = http://localhost:5027
+
+GET {{OneTwenty.WebApiMock_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

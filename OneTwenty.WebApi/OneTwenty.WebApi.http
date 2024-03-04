@@ -1,0 +1,6 @@
+@OneTwenty.WebApi_HostAddress = http://localhost:5285
+
+GET {{OneTwenty.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
