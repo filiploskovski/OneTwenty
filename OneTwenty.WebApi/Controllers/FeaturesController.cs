@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OneTwenty.Services.Services;
+using OneTwenty.Services.Services.User;
 using OneTwenty.Shared.Models;
 
 namespace OneTwenty.WebApi.Controllers
@@ -18,6 +19,7 @@ namespace OneTwenty.WebApi.Controllers
         }
 
         [HttpPost]
+        [Route("merge-duplicates")]
         public async Task<IActionResult> MergeDuplicateUsers(string email)
         {
             await _duplicateUsersService.MergeDuplicateByUserEmail(email);
@@ -25,6 +27,7 @@ namespace OneTwenty.WebApi.Controllers
         }
 
         [HttpGet]
+        [Route("last-month-users")]
         public async Task<List<UserModel>> GetUsersFromLastMonth(string interest)
         {
             return await _userService.GetUsersForLastMonth(interest);

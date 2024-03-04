@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OneTwenty.Services.Services;
+using OneTwenty.Services.Services.Interest;
+using OneTwenty.Services.Services.User;
 
 namespace OneTwenty.Services.Config;
 
@@ -10,5 +12,6 @@ public static class ServicesInit
     {
         services.AddScoped<IDuplicateUsersService, DuplicateUsersService>();
         services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IInterestService, InterestService>();
     }
 }
