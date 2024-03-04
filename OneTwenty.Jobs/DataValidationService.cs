@@ -11,7 +11,6 @@ public class DataValidationService
 
         foreach (var user in users)
         {
-            // Normalize date format
             user.Signup_date = user.Signup_date.Date; // Remove time part
 
             if (!Shared.Extensions.Extensions.IsValidEmail(user.Email))

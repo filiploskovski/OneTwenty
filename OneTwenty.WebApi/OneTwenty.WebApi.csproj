@@ -29,4 +29,10 @@
 		</PackageReference>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Update="CsvFiles\file_data.csv">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
 </Project>

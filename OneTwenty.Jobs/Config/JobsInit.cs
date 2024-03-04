@@ -1,8 +1,7 @@
 ﻿using Hangfire;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using OneTwenty.Jobs.Jobs.Csv;
-using OneTwenty.Jobs.Jobs.RestApi;
+using OneTwenty.Jobs.Jobs.Csv.Config;
 using OneTwenty.Jobs.Jobs.RestApi.Config;
 
 namespace OneTwenty.Jobs.Config;
@@ -13,12 +12,13 @@ public static class JobsInit
     {
         var databaseString = configuration["ConnectionStrings:DatabaseConnection"];
 
-        services.AddScoped<ICsvJobService, CsvJobService>();
+        services.AddScoped<IDataStoreService, DataStoreService>();
 
         services.AddRestApiJob(configuration);
+        services.AddCsvJob(configuration);
 
         services.AddHangfire(config =>
             config.UseSqlServerStorage(databaseString));
-        services.AddHangfireServer();
+        services.AddHangfireServer(q => q.WorkerCount = 1);
     }
 }

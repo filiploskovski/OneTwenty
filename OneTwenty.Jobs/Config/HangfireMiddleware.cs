@@ -19,8 +19,8 @@ public class JobsMiddleware
 
     public async Task InvokeAsync(HttpContext context)
     {
-        _recurringJobManager.AddOrUpdate<IRestApiJobService>("From Rest API", (x) => x.Execute() , Cron.Minutely());
-        _recurringJobManager.AddOrUpdate<ICsvJobService>("From CSV", (x) => x.Execute() , Cron.Minutely());
+        _recurringJobManager.AddOrUpdate<IRestApiJobService>("From Rest API",  x => x.Execute() , Cron.Daily());
+        _recurringJobManager.AddOrUpdate<ICsvJobService>("From CSV", (x) => x.Execute() , Cron.Daily());
         await _next(context);
     }
 }

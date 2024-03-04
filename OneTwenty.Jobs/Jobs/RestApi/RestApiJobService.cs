@@ -6,18 +6,20 @@ namespace OneTwenty.Jobs.Jobs.RestApi;
 public class RestApiJobService : IRestApiJobService
 {
     private readonly IUsersApi _usersApi;
+    private readonly IDataStoreService _dataStoreService;
 
-    public RestApiJobService(IUsersApi usersApi)
+    public RestApiJobService(IUsersApi usersApi, IDataStoreService dataStoreService)
     {
         _usersApi = usersApi;
+        _dataStoreService = dataStoreService;
     }
 
     public async Task<bool> Execute()
     {
         var apiData = await _usersApi.GetUsers();
         var validatedData = DataValidationService.Validate(apiData);
-        Console.WriteLine(apiData);
-        throw new NotImplementedException();
+        await _dataStoreService.Store(validatedData);
+        return true;
     }
 }
 
