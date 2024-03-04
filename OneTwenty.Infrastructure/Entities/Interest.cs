@@ -14,5 +14,6 @@ internal class InterestEntityTypeConfiguration : IEntityTypeConfiguration<Intere
 {
     public void Configure(EntityTypeBuilder<Interest> builder)
     {
+        builder.HasIndex(q => q.Name);
     }
 }

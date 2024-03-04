@@ -16,5 +16,7 @@ internal class UserEntityTypeConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
+        builder.HasIndex(q => q.Name);
+        builder.HasIndex(q => q.Email);
     }
 }
