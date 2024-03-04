@@ -11,12 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\OneTwenty.Infrastructure\OneTwenty.Infrastructure.csproj" />
     <ProjectReference Include="..\OneTwenty.Jobs\OneTwenty.Jobs.csproj" />
+    <ProjectReference Include="..\OneTwenty.Services\OneTwenty.Services.csproj" />
   </ItemGroup>
 
 	<ItemGroup>

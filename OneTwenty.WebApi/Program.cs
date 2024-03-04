@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using OneTwenty.Infrastructure;
 using OneTwenty.Jobs.Config;
+using OneTwenty.Services.Config;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddDatabase(builder.Configuration);
 builder.Services.AddJobs(builder.Configuration);
+builder.Services.AddOneTwentyServices(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OneTwenty.Jobs", "OneTwenty
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneTwenty.Infrastructure", "OneTwenty.Infrastructure\OneTwenty.Infrastructure.csproj", "{B2C94CF5-8FE6-48B8-9064-1AFFADD61DC7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneTwenty.Services", "OneTwenty.Services\OneTwenty.Services.csproj", "{5E8DBBBE-BC88-4E8C-B85F-FC4F6BA8DDC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B2C94CF5-8FE6-48B8-9064-1AFFADD61DC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2C94CF5-8FE6-48B8-9064-1AFFADD61DC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2C94CF5-8FE6-48B8-9064-1AFFADD61DC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E8DBBBE-BC88-4E8C-B85F-FC4F6BA8DDC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E8DBBBE-BC88-4E8C-B85F-FC4F6BA8DDC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E8DBBBE-BC88-4E8C-B85F-FC4F6BA8DDC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E8DBBBE-BC88-4E8C-B85F-FC4F6BA8DDC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
