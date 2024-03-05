@@ -5,6 +5,9 @@ namespace OneTwenty.Jobs;
 
 public class DataValidationService
 {
+    // This is a simple data validation service that utilizes extensions from the Shared namespace.
+    // The use of Extensions.Extensions is an anti-pattern in naming convention, but it's kept for the sake of time.
+    // We can extend this with datetime and all the necessary validations that needs to be executed in memory
     public static List<UserModel> Validate(List<UserModel> users)
     {
         var validated = new List<UserModel>();
